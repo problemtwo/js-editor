@@ -1,5 +1,5 @@
 function print() {
-  document.getElementById('output').innerHTML += arguments.join(', ');
+  document.getElementById('output').innerHTML += Array.prototype.join.call(arguments, ', ');
 }
 
 window.onload = function() {
