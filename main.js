@@ -4,11 +4,13 @@ function print() {
   document.getElementById('output').innerHTML += Array.prototype.join.call(arguments, ', ');
 }
 
-function canvas(width, height) {
+function canvas() {
   cvs = document.createElement('canvas');
   cvs._ctx = cvs.getContext('2d');
   cvs.style.width = '50vw';
-  cvs.style.height = '100vh';
+  cvs.style.height = '90vh';
+  cvs.width = window.innerWidth * 0.5;
+  cvs.height = window.innerHeight * 0.9;
   cvs.style.position = 'absolute';
   cvs.style.left = '50vw';
   cvs.style.top = '0px';
