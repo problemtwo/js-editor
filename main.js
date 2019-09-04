@@ -7,7 +7,7 @@ window.onload = function() {
   var content = document.getElementById('content');
   var ctrl = false;
   
-  content.onkeydown = function(ev) {
+  window.onkeydown = function(ev) {
     switch(ev.keyCode) {
       case 17:
         ctrl = true;
@@ -22,7 +22,7 @@ window.onload = function() {
     }
   };
   
-  content.onkeyup = function(ev) {
+  window.onkeyup = function(ev) {
     switch(ev.keyCode) {
       case 17:
         ctrl = false;
