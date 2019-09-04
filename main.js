@@ -1,5 +1,25 @@
+var cvs;
+
 function print() {
   document.getElementById('output').innerHTML += Array.prototype.join.call(arguments, ', ');
+}
+
+function canvas(width, height) {
+  cvs = document.createElement('canvas');
+  cvs._ctx = cvs.getContext('2d');
+  cvs.style.width = '50vw';
+  cvs.style.height = '100vh';
+  cvs.style.position = 'absolute';
+  cvs.style.left = '50vw';
+  cvs.style.top = '0px';
+  document.body.appendChild(cvs);
+}
+
+function rect(r, g, b, x, y, w, h) {
+  if(cvs) {
+    cvs.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+    cvs.fillRect(x, y, w, h);
+  }
 }
 
 window.onload = function() {
