@@ -17,8 +17,8 @@ function canvas(width, height) {
 
 function rect(r, g, b, x, y, w, h) {
   if(cvs) {
-    cvs.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
-    cvs.fillRect(x, y, w, h);
+    cvs._ctx.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+    cvs._ctx.fillRect(x, y, w, h);
   }
 }
 
