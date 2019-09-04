@@ -30,5 +30,5 @@ window.onload = function() {
       default:
         break;
     }
-  }
+  };
 };
