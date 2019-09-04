@@ -4,7 +4,7 @@ function print() {
 
 window.onload = function() {
   var title = document.getElementById('title');
-  var content = document.getElementById('content');
+  var input = document.getElementById('input');
   var ctrl = false;
   
   window.onkeydown = function(ev) {
@@ -14,7 +14,7 @@ window.onload = function() {
         break;
       case 13:
         try {
-          if(ctrl) { ev.preventDefault(); eval(content.value); }
+          if(ctrl) { ev.preventDefault(); eval(input.value); }
         } catch(ex) { print(ex.stack); }
         break;
       default:
