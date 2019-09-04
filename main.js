@@ -13,7 +13,9 @@ window.onload = function() {
         ctrl = true;
         break;
       case 13:
-        if(ctrl) { ev.preventDefault(); eval(this.value); }
+        try {
+          if(ctrl) { ev.preventDefault(); eval(this.value); }
+        } catch(ex) { print(ex.stack); }
         break;
       default:
         break;
