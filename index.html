@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <title>JS Editor</title>
-    <link rel='stylesheet' href='style.css' type='text/css' />
-    <script src='main.js' type='text/javascript'></script>
-  </head>
-  <body>
-    <textarea id='filename' spellcheck='false' placeholder='untitled.txt'></textarea>
-    <section>
-      <textarea id='input' spellcheck='false' placeholder='...'></textarea>
-      <div id='output'></div>
-    </section>
-  </body>
+	<head>
+		<meta charset='utf-8' />
+		<title>The A.Bhi Text Editor</title>
+		<link rel='stylesheet' type='text/css' href='style.css' />
+		<script type='text/javascript' src='main.js'></script>
+	</head>
+	<body>
+		<section>
+			<textarea id='add-file' spellcheck='false'></textarea>
+			<div class='dir' id='filesystem'></div>
+		</section>
+		<textarea id='input' spellcheck='false'></textarea>
+		<div id='output'></div>
+		<canvas id='canvas' hidden></canvas>
+	</body>
 </html>
